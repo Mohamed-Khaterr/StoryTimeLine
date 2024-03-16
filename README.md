@@ -48,7 +48,7 @@ let package = Package(
 If you prefer not to use any of the dependency managers above, you can integrate `StoryTimeLine` into your project manually. Just copy all the `*.swift` files from the [StoryTimeLine/Sources](https://github.com/Mohamed-Khaterr/StoryTimeLine/tree/main/Sources/StoryTimeLine) folder into your Xcode project.
 
 ## Usage
-in the Storyboard, add `UIView` and set it's custom class to be `StoryTimeLineView`, then create IBOutlet in the `ViewController` class.
+in the Storyboard, add `UIView` and set it's custom class to be `StoryTimeLineView` and module `StoryTimeLine`, then create IBOutlet in the `ViewController` class.
 
 ```swift
 import StoryTimeLine
