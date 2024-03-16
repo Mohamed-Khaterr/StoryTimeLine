@@ -3,7 +3,7 @@
 
 import UIKit
 
-public class StoryTimeLine: UIView {
+public class StoryTimeLineView: UIView {
     
     /// The space between each progress
     ///
@@ -88,8 +88,8 @@ public class StoryTimeLine: UIView {
     // MARK: User Methods
     
     /// Set the count of progress bars in the Time Line
-    /// - Parameter count: Bars count
-    public func setLineBarsCount(_ count: Int) {
+    /// - Parameter count: Progress bars count
+    public func setProgressBarsCount(_ count: Int) {
         for _ in 0..<count {
             let progressBar = StoryTimeLineProgressView()
             progressBar.progressTintColor = progressTintColor
