@@ -57,8 +57,12 @@ public class StoryTimeLineProgressView: UIView {
         backgroundColor = .lightGray
         clipsToBounds = true
         
-        layoutIfNeeded()
+        //layoutIfNeeded()
+        print(layer.cornerRadius, frame.height)
         layer.cornerRadius = frame.height * 0.5
+        print(layer.cornerRadius, frame.height)
+        layoutIfNeeded()
+        print(layer.cornerRadius, frame.height)
         
         progressBar.layer.cornerRadius = layer.cornerRadius
         setProgressBarConstraints()
