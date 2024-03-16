@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "storytimeline",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mohamed-Khaterr/StoryTimeLine.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "73fb8beb11ae99e74efd46646ba658c63dc62c37"
+      }
+    }
+  ],
+  "version" : 2
+}
