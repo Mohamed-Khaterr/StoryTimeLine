@@ -141,7 +141,7 @@ public class StoryTimeLineView: UIView {
         guard startIndex >= 0, startIndex < progressBars.count else { return }
         
         if let currentProgressBarIndex = currentProgressBarIndex {
-            print("-- Test currentProgressBarIndex")
+            print("-- currentProgressBarIndex")
             if startIndex > currentProgressBarIndex {
                 // Going Forward
                 for i in currentProgressBarIndex..<startIndex {
@@ -160,6 +160,7 @@ public class StoryTimeLineView: UIView {
                 }
             }
         } else {
+            print("-- Set Progress Bars")
             for i in 0..<startIndex {
                 DispatchQueue.main.async {
                     self.progressBars[i].setProgress(1, animated: false)
