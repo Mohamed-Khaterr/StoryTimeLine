@@ -12,3 +12,9 @@ public protocol StoryTimeLineDelegate: AnyObject {
     func storyTimeLine(_ timeLine: StoryTimeLineView, didFinishAnimationAt index: Int)
     func storyTimeLine(didFinish timeLine: StoryTimeLineView)
 }
+
+public extension StoryTimeLineDelegate {
+    func storyTimeLine(_ timeLine: StoryTimeLineView, willStartAnimationAt index: Int) {}
+    func storyTimeLine(_ timeLine: StoryTimeLineView, didFinishAnimationAt index: Int) {}
+    func storyTimeLine(didFinish timeLine: StoryTimeLineView) {}
+}
