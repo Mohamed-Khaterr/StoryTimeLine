@@ -1,27 +1,42 @@
 # StoryTimeLine
-> This library is to display time line like instagram Story Time Line.
+![Xcode: Version](https://img.shields.io/badge/Xcode-15.2-lightgray?logo=Xcode)
+![Swift: Version](https://img.shields.io/badge/Swift-5.9-lightgray?logo=Swift)
+![iOS: Version](https://img.shields.io/badge/iOS-12.0+-lightgray) 
 
-[![Swift Version][swift-image]][swift-url]
-[![Build Status][travis-image]][travis-url]
-[![License][license-image]][license-url]
-[![codebeat-badge][codebeat-image]][codebeat-url]
-
-One to two paragraph statement about your product and what it does.
+This library is to display time line like instagram Story Time Line.
 
 <image src="StoryTimeLine.png" width="800">
 
 ## Table of Contents
- - [Installation](#installation)
- - [Usage](#usage)
- - [Demo Video](#demo-video)
+- [Overview](#overview)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Example Project](#example-project)
+- [License](#license)
+- [Author](#author)
+
+## Overview
+StoryTimeLine is a custom UIView designed to visualize a timeline with progress bars. This Swift package provides an easy-to-use interface for creating and animating timeline.
+
+### Features
+- **Customizable Appearance**: Customize the appearance of the progress bars with options to set track and progress tint colors.
+- **Flexible Configuration**: Adjust the spacing between progress bars and set the duration for animated progress.
+- **Interactive Control**: Pause, resume, stop, reset, and navigate through the timeline with next and previous methods.
+- **Delegate Support**: Utilize delegate methods to receive notifications on animation completion and progress updates.
+
+## Requirements
+- iOS 12.0+
+- Swift 5.9+
 
 ## Installation
-
-Add this project on your `Package.swift`
+To add StoryTimeLine as a dependency to your project, follow these steps:
+1. Open your Swift project in Xcode.
+2. Navigate to `File` -> `Add Package Dependencies`.
+3. Paste `https://github.com/Mohamed-Khaterr/StoryTimeLine.git` into the search bar.
+4. Choose the version you want to use and click `Add Package`.
 
 ```swift
-import PackageDescription
-
 let package = Package(
     dependencies: [
         .Package(url: "https://github.com/Mohamed-Khaterr/StoryTimeLine.git")
@@ -29,8 +44,10 @@ let package = Package(
 )
 ```
 
-## Usage
+### Manually
+If you prefer not to use any of the dependency managers above, you can integrate `StoryTimeLine` into your project manually. Just copy all the `*.swift` files from the [StoryTimeLine/Sources](https://github.com/Mohamed-Khaterr/StoryTimeLine/tree/main/Sources/StoryTimeLine) folder into your Xcode project.
 
+## Usage
 in the Storyboard, add `UIView` and set it's custom class to be `StoryTimeLineView`, then create IBOutlet in the `ViewController` class.
 
 ```swift
@@ -123,21 +140,15 @@ extension ViewController: StoryTimeLineDelegate {
 }
 ```
 
-> You can Check the [Example project](https://github.com/Mohamed-Khaterr/StoryTimeLine/tree/main/Example) to learn more about the library.
+## Example Project
+Take a look at the example project over [here](https://github.com/Mohamed-Khaterr/StoryTimeLine/tree/main/Example)
+
+1. Download it.
+2. Open the Example.xcworkspace in Xcode.
+3. Enjoy!
+
+## License
+StoryTimeLine is available under the MIT license. See the [LICENSE]() file for more info.
 
 ## Author
-
-Mohamed Khater – [Mohamed-Khaterr](https://twitter.com/dbader_org) – mohamed.khateerr@gmail.com
-
-Distributed under the MIT license. See `LICENSE` for more information.
-
-[GitHub](https://github.com/Mohamed-Khaterr/StoryTimeLine)
-
-[swift-image]:https://img.shields.io/badge/swift-3.0-orange.svg
-[swift-url]: https://swift.org/
-[license-image]: https://img.shields.io/badge/License-MIT-blue.svg
-[license-url]: LICENSE
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[codebeat-image]: https://codebeat.co/badges/c19b47ea-2f9d-45df-8458-b2d952fe9dad
-[codebeat-url]: https://codebeat.co/projects/github-com-vsouza-awesomeios-com
+Mohamed Khater – [Mohamed-Khaterr](https://www.linkedin.com/in/mohamed-khaterr) – mohamed.khateerr@gmail.com
