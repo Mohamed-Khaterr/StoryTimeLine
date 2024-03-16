@@ -99,7 +99,7 @@ public class StoryTimeLineProgressView: UIView {
         } else {
             multiplier = newValue
         }
-        
+        print("-- newValue:", newValue)
         progressBarWidthConstraint.constant = frame.width * multiplier
     }
 }

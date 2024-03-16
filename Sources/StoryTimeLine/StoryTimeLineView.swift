@@ -163,7 +163,7 @@ public class StoryTimeLineView: UIView {
             print("-- Set Progress Bars: \(startIndex)")
             for i in 0..<startIndex {
                 print("-- index:", i)
-                self.progressBars[i].setProgress(1, animated: false)
+                self.progressBars[i].setProgress(0, animated: false)
                 print("-- progress:", self.progressBars[i].progress)
             }
         }
