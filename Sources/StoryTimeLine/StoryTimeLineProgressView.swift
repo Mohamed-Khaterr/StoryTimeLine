@@ -81,7 +81,7 @@ public class StoryTimeLineProgressView: UIView {
     
     // MARK: - Methods
     public func setProgress(_ progress: CGFloat, animated: Bool) {
-        print("-- setProgress:", progress)
+        layoutIfNeeded()
         if animated {
             UIView.animate(withDuration: 1) { [weak self] in
                 self?.updateProgressBarValue(progress)
@@ -101,12 +101,7 @@ public class StoryTimeLineProgressView: UIView {
             multiplier = newValue
         }
         
-        print("-- progressBarWidthConstraint:", progressBarWidthConstraint.constant)
-        layoutIfNeeded()
-        print("-- frame.width:", frame.width)
         progressBarWidthConstraint.constant = frame.width * multiplier
         progressBar.layoutIfNeeded()
-        layoutIfNeeded()
-        print("-- progressBarWidthConstraint:", progressBarWidthConstraint.constant)
     }
 }

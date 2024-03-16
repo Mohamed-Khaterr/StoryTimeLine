@@ -161,6 +161,8 @@ public class StoryTimeLineView: UIView {
             }
         } else {
             print("-- Set Progress Bars: \(startIndex)")
+            layoutIfNeeded()
+            stackView.layoutIfNeeded()
             for i in 0..<startIndex {
                 print("-- index:", i)
                 self.progressBars[i].setProgress(1, animated: false)
