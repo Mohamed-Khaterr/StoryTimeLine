@@ -9,14 +9,17 @@ import UIKit
 
 public class StoryTimeLineView: UIView {
     
-    /// The space between each progress
+    /// The space between each progress bar
     ///
-    /// The default is 1
+    /// Default is 1
     public var spacing: CGFloat {
         set { stackView.spacing = newValue }
         get { stackView.spacing }
     }
     
+    /// The track color of each progress bar
+    ///
+    /// Default is UIColor.lightGray
     public var trackTintColor: UIColor? = .lightGray {
         didSet {
             for progressBar in progressBars {
@@ -25,6 +28,9 @@ public class StoryTimeLineView: UIView {
         }
     }
     
+    /// The progress color of each progress bar
+    ///
+    /// Default is UIColor.white
     public var progressTintColor: UIColor? = .white {
         didSet {
             for progressBar in progressBars {
@@ -220,7 +226,7 @@ public class StoryTimeLineView: UIView {
         currentProgressBarIndex = nil
     }
     
-    /// Fill the current progress bar and start the next progress bar
+    /// Fill the current progress bar and start animating on the next progress bar
     public func next() {
         guard let currentProgressBarIndex = currentProgressBarIndex else { return }
         let nextIndex = currentProgressBarIndex + 1
@@ -229,7 +235,7 @@ public class StoryTimeLineView: UIView {
         }
     }
     
-    /// Empty the current progress bar and start the previous progress bar
+    /// Empty the current progress bar and start animating the previous progress bar
     public func pervious() {
         guard let currentProgressBarIndex = currentProgressBarIndex else { return }
         let previousIndex = currentProgressBarIndex - 1
