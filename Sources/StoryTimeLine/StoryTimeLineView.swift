@@ -141,6 +141,7 @@ public class StoryTimeLineView: UIView {
         guard startIndex >= 0, startIndex < progressBars.count else { return }
         
         if let currentProgressBarIndex = currentProgressBarIndex {
+            print("-- Test currentProgressBarIndex")
             if startIndex > currentProgressBarIndex {
                 // Going Forward
                 for i in currentProgressBarIndex..<startIndex {
