@@ -81,7 +81,7 @@ public class StoryTimeLineProgressView: UIView {
     
     // MARK: - Methods
     public func setProgress(_ progress: CGFloat, animated: Bool) {
-        print("-- setProgress:", prgoress)
+        print("-- setProgress:", progress)
         if animated {
             UIView.animate(withDuration: 1) { [weak self] in
                 self?.updateProgressBarValue(progress)
