@@ -67,8 +67,8 @@ public class StoryTimeLineView: UIView {
     // MARK: - Properties
     public weak var delegate: StoryTimeLineDelegate?
     var timer: Timer? {
-        didSet {
-            oldValue?.invalidate() // Stop the old timer closure
+        willSet {
+            timer?.invalidate() // Stop the old timer closure
         }
     }
     var duration: CGFloat?
