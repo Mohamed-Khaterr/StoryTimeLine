@@ -101,7 +101,10 @@ public class StoryTimeLineProgressView: UIView {
             multiplier = newValue
         }
         
+        print("-- progressBarWidthConstraint:", progressBarWidthConstraint.constant)
         progressBarWidthConstraint.constant = frame.width * multiplier
         progressBar.layoutIfNeeded()
+        layoutIfNeeded()
+        print("-- progressBarWidthConstraint:", progressBarWidthConstraint.constant)
     }
 }
