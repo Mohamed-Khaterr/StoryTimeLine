@@ -143,7 +143,7 @@ public class StoryTimeLineView: UIView {
         if let currentProgressBarIndex = currentProgressBarIndex {
             if startIndex > currentProgressBarIndex {
                 // Going Forward
-                for i in currentProgressBarIndex...startIndex {
+                for i in currentProgressBarIndex..<startIndex {
                     DispatchQueue.main.async {
                         // Set all empty progress bars before startIndex to be full
                         self.progressBars[i].setProgress(1, animated: false)
