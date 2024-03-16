@@ -164,7 +164,9 @@ public class StoryTimeLineView: UIView {
             for i in 0..<startIndex {
                 print("-- index:", i)
                 DispatchQueue.main.async {
+                    print("-- index2:", i)
                     self.progressBars[i].setProgress(1, animated: false)
+                    print("-- progress:", self.progressBars[i].progress)
                 }
             }
         }
