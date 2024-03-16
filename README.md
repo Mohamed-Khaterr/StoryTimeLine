@@ -113,6 +113,9 @@ timeLineView.trackTintColor = UIColor.green // Default is UIColor.lightGray
 
 // Set the progress color of each progress bar
 timeLineView.progressTintColor = UIColor.red // Default is UIColor.white
+
+// Set the cornerRadius of the tack and progress
+timeLineView.cornerRadius = 2
 ```
 
 ### Delegate
