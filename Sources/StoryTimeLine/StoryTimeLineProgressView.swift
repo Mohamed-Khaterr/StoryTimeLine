@@ -41,6 +41,15 @@ public class StoryTimeLineProgressView: UIView {
         return progressBarWidthConstraint.constant / frame.width
     }
     
+    /// CornerRadius of the track and progress
+    public var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+            progressBar.layer.cornerRadius = newValue
+        }
+        get { layer.cornerRadius }
+    }
+    
     // MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -56,15 +65,6 @@ public class StoryTimeLineProgressView: UIView {
     private func setupProgressView() {
         backgroundColor = .lightGray
         clipsToBounds = true
-        
-        //layoutIfNeeded()
-        print(layer.cornerRadius, frame.height)
-        layer.cornerRadius = frame.height * 0.5
-        print(layer.cornerRadius, frame.height)
-        layoutIfNeeded()
-        print(layer.cornerRadius, frame.height)
-        
-        progressBar.layer.cornerRadius = layer.cornerRadius
         setProgressBarConstraints()
     }
     

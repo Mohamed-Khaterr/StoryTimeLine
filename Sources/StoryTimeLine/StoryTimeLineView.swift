@@ -39,6 +39,18 @@ public class StoryTimeLineView: UIView {
         }
     }
     
+    /// CornerRadius of the track and progress
+    public var cornerRadius: CGFloat {
+        set { 
+            layer.cornerRadius = newValue
+            for progressBar in progressBars {
+                progressBar.cornerRadius = newValue
+            }
+        }
+        
+        get { layer.cornerRadius }
+    }
+    
     // MARK: UI Elements
     private var progressBars = [StoryTimeLineProgressView]()
     
@@ -104,6 +116,7 @@ public class StoryTimeLineView: UIView {
             let progressBar = StoryTimeLineProgressView()
             progressBar.progressTintColor = progressTintColor
             progressBar.trackTintColor = trackTintColor
+            progressBar.cornerRadius = cornerRadius
             progressBar.setProgress(0, animated: false)
             progressBars.append(progressBar)
             stackView.addArrangedSubview(progressBar)
