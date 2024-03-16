@@ -85,6 +85,7 @@ public class StoryTimeLineProgressView: UIView {
         if animated {
             UIView.animate(withDuration: 1) { [weak self] in
                 self?.updateProgressBarValue(progress)
+                self?.progressBar.layoutIfNeeded()
             }
         } else {
             self.updateProgressBarValue(progress)

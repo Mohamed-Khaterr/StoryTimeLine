@@ -140,11 +140,10 @@ public class StoryTimeLineView: UIView {
     public func start(from startIndex: Int = 0) {
         guard startIndex >= 0, startIndex < progressBars.count else { return }
         
-        layoutIfNeeded()
-        stackView.layoutIfNeeded()
+//        layoutIfNeeded()
+//        stackView.layoutIfNeeded()
         
         if let currentProgressBarIndex = currentProgressBarIndex {
-            print("-- currentProgressBarIndex")
             if startIndex > currentProgressBarIndex {
                 // Going Forward
                 for i in currentProgressBarIndex..<startIndex {
