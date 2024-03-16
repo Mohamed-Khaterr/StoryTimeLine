@@ -140,6 +140,9 @@ public class StoryTimeLineView: UIView {
     public func start(from startIndex: Int = 0) {
         guard startIndex >= 0, startIndex < progressBars.count else { return }
         
+        layoutIfNeeded()
+        stackView.layoutIfNeeded()
+        
         if let currentProgressBarIndex = currentProgressBarIndex {
             print("-- currentProgressBarIndex")
             if startIndex > currentProgressBarIndex {
@@ -160,13 +163,10 @@ public class StoryTimeLineView: UIView {
                 }
             }
         } else {
-            print("-- Set Progress Bars: \(startIndex)")
-            layoutIfNeeded()
-            stackView.layoutIfNeeded()
             for i in 0..<startIndex {
-                print("-- index:", i)
-                self.progressBars[i].setProgress(1, animated: false)
-                print("-- progress:", self.progressBars[i].progress)
+                DispatchQueue.main.async {
+                    self.progressBars[i].setProgress(1, animated: false)
+                }
             }
         }
         
